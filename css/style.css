@@ -1,0 +1,509 @@
+/* stiahnuty font pre south park */
+@font-face {
+    font-family: 'oswald';
+    src: URL('south\ park.ttf') format('truetype');
+  }
+
+
+/* background ma gradient zlava doprava od zelenej po modru */
+body {
+    background: linear-gradient(
+        90deg,
+        rgb(243, 129, 233) 0%,
+        rgb(126, 212, 247) 100%
+    );
+    font-family: "oswald";
+    box-sizing: border-box;
+}
+
+
+
+.content {
+    margin: auto;
+    max-width: 1100px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+/* NAVIGACIA - position ma fixed aby sa hybala po stranke a položky su ako inline blocky aby boli v jednom riadku */
+nav {
+    margin-top: 0;
+    height: 60px;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    background-color: inherit;
+    background: linear-gradient(
+        90deg,
+        rgb(243, 129, 233) 0%,
+        rgb(126, 212, 247) 100%
+    );
+    top:0
+}
+
+nav ul {
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+nav ul li{
+    display: inline-block;
+    font-size: 30px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+nav ul li a:hover {
+    color: white;
+}
+
+.toggle {
+    display: none;
+}
+
+/*Sub menu - pri hoveri na FAMILY sa zobrazi submenu */
+/* Musi to mat position relative aby som mohol pod tým zobrazit block */
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+.dropdown li {
+    padding-bottom: 12px;
+}
+
+/* primarne je display none, pretože panel sa zobrazi iba pri hover */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    z-index: 1;
+    background: linear-gradient(
+        90deg,
+        rgb(243, 129, 233) 0%,
+        rgb(126, 212, 247) 100%
+    );
+    margin-top: 0;
+    border-radius: 10px;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* pri hoveri na "FAMILY" sa zobrazi sub-menu*/
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a:hover {
+    color: white;
+}
+
+/* Header stranky - nadpis + fotka */
+header {
+    padding-top: 100px;
+    text-align: center;
+}
+
+header h1{
+    font-size: 70px;
+}
+
+header h1 a {
+    text-decoration: none;
+    color: black;
+}
+
+header img {
+    width: 900px;
+}
+
+
+/* about sekcia */
+#about {
+    padding-top: 60px;
+}
+
+#about h2{
+    font-size: 45px;
+    text-align: center;
+}
+
+#about p {
+    text-align: justify;
+    font-family: "comic sans MS"
+}
+
+
+/* family sekcia */
+#family {
+    padding-top: 60px;
+}
+
+#cartman {
+    padding-top: 60px;
+}
+
+#kyle {
+    padding-top: 60px;
+}
+
+#stan {
+    padding-top: 60px;
+}
+
+#kenny {
+    padding-top: 60px;
+}
+
+#family h2{
+    font-size: 45px;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+/* obalenie sekci ktore maju fotku na lavej strane a text napravo*/
+.wrapper {
+    display: flex;
+    height: 500px;
+    align-items: center;
+}
+
+.wrapperLeft {
+    text-align: center;
+    width: 50%;
+}
+
+.wrapperLeft img{
+    width: 60%;
+}
+
+/* fotka erica je moc mala, takze musi mat width 100 oproti ostatnym */
+.wrapperLefteric {
+    text-align: center;
+    width: 50%;
+}
+
+.wrapperLefteric img{
+    width: 100%;
+}
+
+.wrapperRight {
+    width: 50%;
+}
+
+.wrapperRight h3 {
+    text-align: center;
+    font-size: 35px;
+}
+
+.wrapperRight p {
+    font-family: "comic sans MS";
+    text-align: center;
+}
+
+/* wrapper pre sekcie ktore maju fotku na pravej strane */
+.wrapper2 {
+    display: flex;
+    height: 500px;
+    align-items: center;
+}
+
+.wrapper2Right {
+    text-align: center;
+    width: 50%;
+}
+
+.wrapper2Right img{
+    width: 78%;
+    max-height: 100%;
+}
+
+.wrapper2Rightkenny {
+    text-align: center;
+    width: 48%;
+}
+
+.wrapper2Rightkenny img{
+    width: 70%;
+    max-height: 100%;
+}
+
+.wrapper2Left {
+    width: 50%;
+}
+
+.wrapper2Left h3 {
+    text-align: center;
+    font-size: 35px;
+}
+
+.wrapper2Left p {
+    font-family: "comic sans MS";
+    text-align: center;
+}
+
+#awards {
+    padding-top: 60px;
+}
+
+#awards h2{
+    font-size: 45px;
+    text-align: center;
+}
+
+.item {
+    box-sizing: border-box;
+    float: left;
+    width: 45%;
+    height: 250px;
+    border-radius: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background: linear-gradient(
+        90deg,
+        rgb(126, 212, 247) 0%,
+        rgb(243, 129, 233) 100%
+    );
+    display: flex;
+    align-items: center;
+}
+
+.itemleft{
+    width: 50%;
+}
+
+.itemright {
+    width: 50%;
+    text-align: center;
+}
+
+.itemright h3 {
+    font-size: 30px;
+}
+
+.itemleft img{
+    width: 100%;
+    height: 90%;
+}
+
+/* kontakt sekcia */
+
+.hidden {
+    margin: auto;
+    max-width: 1100px;
+    visibility: hidden;
+}
+
+#contact {
+    padding-top: 40px;
+    display: block;
+}
+
+#contact h2{
+    border-top: 5px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
+    padding-top: 50px;
+    font-size: 45px;
+    text-align: center;
+}
+
+.half {
+    display: flex;
+    align-items: center;
+}
+
+.halfleft {
+    width: 50%;
+    text-align: center;
+}
+
+.halfleft h3 {
+    font-size: 30px;
+}
+
+.halfright {
+    text-align: center;
+    width: 50%;
+}
+
+.halfright a {
+    font-size: 100px;
+    display: inline-block;
+    width: 45%;
+    color: black;
+}
+
+/* odtialto je riesena responzivita */
+@media screen and (max-width: 990px) {
+    .content{
+        width: 500px;
+    }
+
+    /* zmensenie fontu pisma v navigaci */
+    nav ul li {
+        font-size: 20px;
+    }
+
+    header h1{
+        font-size: 40px;
+    }
+
+    header img{
+        width: 500px;
+    }
+
+    /* zmena zobrazenia hlavnej sekcie o postavach, tak aby boli fotka a popis
+       pod sebou */
+    .wrapper{
+        display: block;
+        height: auto;
+    }
+    .wrapperLefteric {
+        width: 100%;
+    }
+    .wrapperRight {
+        width: 100%;
+    }
+    .wrapper2 {
+        display: block;
+        height: auto;
+    }
+    .wrapper2Left{
+        width: 100%;
+    }
+    .wrapper2Right{
+        width: 100%;
+    }
+    .wrapperLeft{
+        width: 100%;
+    }
+    .wrapper2Rightkenny{
+        width: 100%;
+    }
+
+    .item{
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .hidden{
+        width: 600px;
+    }
+}
+
+/* iba zmensienie fontu pisma v navigaci */ 
+@media screen and (max-width: 715px) {
+    nav ul li {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+/* zmensenie sirky contentu (obsahu) */
+@media screen and (max-width: 630px) {
+    .content {
+        width: 400px;
+    }
+
+    header img{
+        width: 400px;
+    }
+
+    .hidden {
+        width: 300px;
+    }
+
+    .itemleft img {
+        width: 100%;
+        height: 70%;
+    }
+}
+
+/* znova zmensenie fontu v navigaci */
+@media screen and (max-width: 570px) {
+    nav ul li {
+        font-size: 15px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+
+/* zobrazenie pre mobil - navigacia je skryta */
+@media screen and (max-width: 480px) {
+    .toggle {
+        display: block;
+        cursor: pointer;
+        font-size: 35px;
+        text-align: left;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+
+    nav {
+        left: 0;
+        height: 46px;
+    }
+
+    nav ul li {
+        display: none;
+        background: linear-gradient(
+            90deg,
+          rgb(126, 212, 247) 0%,
+          rgb(243, 129, 233) 100%
+    );
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: none;
+    }
+
+    .dropdown {
+        width: 100%;
+    }
+
+    .content {
+        width: 300px;
+    }
+
+    .half{
+        display: block;
+    }
+
+    .halfleft {
+        width: 100%;
+    }
+
+    .halfright {
+        width: 100%;
+    }
+
+    header img {
+        width: 100%;
+    }
+
+    .item {
+        height: 200px;
+    }
+
+    .itemright h3 {
+        font-size: 20px;
+    }
+}

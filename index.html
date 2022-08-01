@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="cs">
+    <head>
+		<meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>South Park</title>
+		<link rel="stylesheet" href="css/style.css">
+        <script type="module" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule="" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+              $("a").on('click', function(event) {
+                if (this.hash !== "") {
+                  event.preventDefault();
+                  var hash = this.hash;
+                  $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                  }, 800, function(){
+                    window.location.hash = hash;
+                  });
+                } 
+              });
+
+              $(".toggle").click(function (event) {
+                event.preventDefault();
+                menuHeight = $("nav").height();
+                $("nav ul li")
+                    .slice(1)
+                    .toggle("slow", function () {});
+                });
+            });
+
+        </script>
+	</head>
+<body>
+    <nav>
+        <ul id="#navbar">
+            <li class="toggle"><a><ion-icon name="menu-outline"></ion-icon></a></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <div class="dropdown">
+                <li><a href="#family">Family</a></li>
+                <div class="dropdown-content">
+                    <a href="#cartman">Cartman</a>
+                    <a href="#kyle">Kyle</a>
+                    <a href="#stan">Stan</a>
+                    <a href="#kenny">Kenny</a>
+                </div>
+            </div>
+            <li><a href="#awards">Awards</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header id="home" class="content">
+        <h1><a href="http://www.stud.fit.vutbr.cz/~xzauko00/itw.html">Welcome to South Park</a></h1>
+        <img src="images/all.png" alt="Picture is not loaded"/>
+    </header>
+
+    <div id="about" class="content">
+        <div>
+            <h2>About us</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eu mi bibendum, sollicitudin ligula quis, semper augue. Duis at leo et risus lacinia dignissim tristique varius leo. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras augue eros, accumsan nec mauris nec, rhoncus mollis tortor. Fusce tristique semper diam ut volutpat. Duis interdum enim non mauris gravida, ut luctus risus sagittis. Ut a tortor convallis, volutpat tellus vitae, rhoncus purus. Pellentesque pulvinar nisl nisl, sed commodo tellus auctor quis. Nunc ac nisi id dolor lacinia fringilla quis sit amet turpis. Sed laoreet elementum diam, sit amet eleifend sapien. Vestibulum tempus, arcu ornare mattis facilisis, lacus ante ornare velit, quis aliquet urna velit vitae libero. Pellentesque vehicula vel ligula iaculis facilisis. Sed posuere id diam vitae tincidunt. Nulla non dolor non elit rutrum venenatis id quis nunc. Curabitur venenatis ex bibendum tincidunt tempor. Aenean orci diam, ullamcorper ut posuere ut, fringilla vel augue.</p>
+        </div>
+    </div>
+
+    <div id="family" class="content"> 
+        <h2>Family</h2>
+        
+        <div id="cartman" class="wrapper">
+            <div class="wrapperLefteric">
+                <img src="images/eric.png" alt="Picture is not loaded"/>
+            </div>
+            <div class="wrapperRight">
+                <h3>Eric Cartman</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ut leo arcu. Pellentesque condimentum, enim eget fermentum ullamcorper, enim purus feugiat metus, et mattis justo quam vitae turpis. Morbi est justo, sagittis a purus et, gravida eleifend tortor. Nullam a justo dui. Suspendisse sed tristique est. Duis eu nunc et neque volutpat rutrum in at neque. Quisque dui justo, pellentesque nec risus sed, egestas efficitur odio. Vivamus sit amet libero lectus. Etiam interdum tortor quis bibendum euismod.</p>
+            </div>
+        </div>
+        
+        <div id="kyle" class="wrapper2">
+            <div class=wrapper2Left>
+                <h3>Kyle Broflovski</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ut leo arcu. Pellentesque condimentum, enim eget fermentum ullamcorper, enim purus feugiat metus, et mattis justo quam vitae turpis. Morbi est justo, sagittis a purus et, gravida eleifend tortor. Nullam a justo dui. Suspendisse sed tristique est. Duis eu nunc et neque volutpat rutrum in at neque. Quisque dui justo, pellentesque nec risus sed, egestas efficitur odio. Vivamus sit amet libero lectus. Etiam interdum tortor quis bibendum euismod.</p>
+            </div>
+            <div class="wrapper2Right">
+                <img src="images/kyle.png" alt="Picture is not loaded"/>
+            </div>
+        </div>
+        
+        <div id="stan" class="wrapper">
+            <div class="wrapperLeft">
+                <img src="images/stan.png" alt="Picture is not loaded"/>
+            </div>
+            <div class="wrapperRight">
+                <h3>Stan Marsh</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ut leo arcu. Pellentesque condimentum, enim eget fermentum ullamcorper, enim purus feugiat metus, et mattis justo quam vitae turpis. Morbi est justo, sagittis a purus et, gravida eleifend tortor. Nullam a justo dui. Suspendisse sed tristique est. Duis eu nunc et neque volutpat rutrum in at neque. Quisque dui justo, pellentesque nec risus sed, egestas efficitur odio. Vivamus sit amet libero lectus. Etiam interdum tortor quis bibendum euismod.</p>
+            </div>
+        </div>
+        
+        <div id="kenny" class="wrapper2">
+            <div class=wrapper2Left>
+                <h3>Kenny McCormick</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ut leo arcu. Pellentesque condimentum, enim eget fermentum ullamcorper, enim purus feugiat metus, et mattis justo quam vitae turpis. Morbi est justo, sagittis a purus et, gravida eleifend tortor. Nullam a justo dui. Suspendisse sed tristique est. Duis eu nunc et neque volutpat rutrum in at neque. Quisque dui justo, pellentesque nec risus sed, egestas efficitur odio. Vivamus sit amet libero lectus. Etiam interdum tortor quis bibendum euismod.</p>
+            </div>
+            <div class="wrapper2Rightkenny">
+                <img src="images/kenny.png" alt="Picture is not loaded"/>
+            </div>
+        </div>
+    </div>
+
+    <div id="awards" class="content">
+        <h2>Awards</h2>
+        <div class="place">
+            <div class="item">
+                <div class="itemleft">
+                    <img src="images/oscar.png" alt="Picture is not loaded"/>
+                </div>
+                <div class="itemright">
+                    <h3>Oscars 2017</h3>
+                    <h4>Eric Cartman</h4>
+                    <h4>Outstanding play</h4>
+                </div>
+            </div>
+            <div class="item">
+                <div class="itemleft">
+                    <img src="images/emmy.png" alt="Picture is not loaded"/>
+                </div>
+                <div class="itemright">
+                    <h3>Emmy 2012</h3>
+                    <h4>South park</h4>
+                    <h4>Best series</h4>
+                </div>
+            </div>
+            <div class="item">
+                <div class="itemleft">
+                    <img src="images/grammy.png" alt="Picture is not loaded"/>
+                </div>
+                <div class="itemright">
+                    <h3>Grammy 2014</h3>
+                    <h4>Stan Marsh</h4>
+                    <h4>Nice song</h4>
+                </div>
+            </div>
+            <div class="item">
+                <div class="itemleft">
+                    <img src="images/globe.png" alt="Picture is not loaded"/>
+                </div>
+                <div class="itemright">
+                    <h3>Golden globes 2019</h3>
+                    <h4>Kenny McCormick</h4>
+                    <h4>Best death</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="hidden">
+        PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER
+    </div>
+
+    <div id="contact" class="content">
+        <h2>Contact</h2>
+        <div class="half">
+            <div class="halfleft">
+                <h3>Address</h3>
+                <h4>Somewhere in the sky, Earth</h4>
+                <h5>Some city - dont know name 2147</h5>
+                <h3>Number</h3>
+                <h4>+987 254 789 212</h4>
+            </div>
+            <div class="halfright">
+                <a href="https://www.facebook.com/"><ion-icon name="logo-facebook"></ion-icon></a>
+                <a href="https://www.instagram.com/"><ion-icon name="logo-instagram"></ion-icon></a>
+                <a href="https://www.twitter.com/"><ion-icon name="logo-twitter"></ion-icon></a>
+                <a href="https://www.youtube.com/"><ion-icon name="logo-youtube"></ion-icon></a>
+            </div>
+            
+        </div>
+    </div>
+
+</body>
+</html>
